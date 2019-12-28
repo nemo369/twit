@@ -1,0 +1,25 @@
+{
+  "name": "messika_twitter",
+  "version": "1.0.0",
+  "description": "node scrapper test",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r esm index.js --ignore db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nemo369/twit.git"
+  },
+  "author": "nemo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nemo369/twit/issues"
+  },
+  "homepage": "https://github.com/nemo369/twit#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "esm": "^3.2.25",
+    "nodemon": "^2.0.2"
+  }
+}
