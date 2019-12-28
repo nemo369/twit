@@ -10,9 +10,7 @@
 
 <body>
     <script>
-        fetch("https://twitter.com/adimessika", {
-            method: "GET",
-        })
+        fetch("https://crossorigin.me/https://twitter.com/adimessika")
             .then(response => response.json())
             .then(response => console.log(response))
             .catch(err => {
