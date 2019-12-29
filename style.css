@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Amatic SC", cursive;
+  text-align: right;
+  direction: rtl;
+  background-color: rgb(248, 173, 188);
+  color: rgb(71, 69, 71);
+}
+main {
+  max-width: 640px;
+  margin: auto;
+  padding: 3vh 5px;
+  border: 1px solid rgb(250, 249, 250);
+  box-shadow: 0 0 1px rgb(49, 49, 49);
+  height: calc(100vh - 50px);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  font-family: "Lato", sans-serif;
+}
+
+.odometer {
+  font-size: calc(2rem + 5vw);
+}
+
+.title {
+  letter-spacing: 1.5px;
+  line-height: 1.25;
+}

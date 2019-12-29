@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>כמה עוקבים יש למסיקה בטוויטר?</title>
@@ -12,14 +14,50 @@
 
     <main>
         <h1>כמה עוקבים יש למסיקה בטוויטר?</h1>
+
+        <div class="container">
+            <div class="counter">
+                <div class="odometer" class="odometer" id="odometer">0</div>
+            </div>
+        </div>
+
+        <div class="botoom">
+            <a href="http://twitter.com/adimessika" class="twitter-follow-button" data-show-count="false">
+                Follow @adimessika</a>
+            <script src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+        </div>
     </main>
     <script>
-        fetch("https://twiiter-scraper.herokuapp.com/")
-            .then(response => response.json())
-            .then(response => console.log(response))
-            .catch(err => {
-                console.log(err);
-            });
+
+
+        const container = document.querySelector(".container");
+        const col = document.querySelector(".counter");
+        const odometer = document.getElementById("odometer");
+        let toalFolowers = 98
+        let subCount = 0;
+
+
+        const intervalId = setInterval(() => {
+            requestCall();
+            if (subCount >= toalFolowers) {
+                clearInterval(intervalId)
+            }
+        }, 2);
+
+        function requestCall() {
+            subCount++;
+            odometer.innerHTML = subCount;
+        }
+
+
+
+
+        // fetch("https://twiiter-scraper.herokuapp.com/")
+        //     .then(response => response.json())
+        //     .then(response => console.log(response))
+        //     .catch(err => {
+        //         console.log(err);
+        //     });
     </script>
 </body>
 
