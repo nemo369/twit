@@ -63,6 +63,7 @@
             console.log(response.json());
             response.json().then(data => {
                 console.log(data);
+                startCount(parseInt(data.followers))
 
             })
         }
