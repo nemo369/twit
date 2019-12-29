@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="http://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>כמה עוקבים יש למסיקה בטוויטר?</title>
@@ -52,12 +52,12 @@
 
 
 
-        // fetch("https://twiiter-scraper.herokuapp.com/")
-        //     .then(response => response.json())
-        //     .then(response => console.log(response))
-        //     .catch(err => {
-        //         console.log(err);
-        //     });
+        fetch("http://twiiter-scraper.herokuapp.com/")
+            .then(response => response.json())
+            .then(response => console.log(response))
+            .catch(err => {
+                console.log(err);
+            });
     </script>
 </body>
 
