@@ -1,22 +1,18 @@
-// import {getTwitterCount} from './lib/scrapping.js'
-var express = require('express');
-var app = express();
-var path = require('path');
-
-// scrape()
-// async function scrape() {
-//     const followers = await getTwitterCount()
-//     console.log(parseFloat(followers));
-
-
-// }
+const express = require('express');
+const app = express();
+const path = require('path');
+import { getTwitterCount } from './lib/scrapping.js'
 
 
 
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
+app.get('/scrape', async (req, res, next) => {
+    console.log(`Scrape It`);
+    const followers = await getTwitterCount();
+    res.json({ followers })
+    // return parseFloat(followers);
+
 });
 
-app.listen(process.env.PORT || 4000, function () {
+app.listen(process.env.PORT || 1988, () => {
     console.log('Node app is working!');
 });
