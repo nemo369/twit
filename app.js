@@ -12,6 +12,11 @@ app.get('/scrape', async (req, res, next) => {
     // return parseFloat(followers);
 
 });
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+
 
 app.listen(process.env.PORT || 1988, () => {
     console.log('Node app is working!');
