@@ -8,10 +8,7 @@ import { getTwitterCount } from './lib/scrapping.js'
 app.get('/scrape', async (req, res, next) => {
     console.log(`Scrape It`);
     const followers = await getTwitterCount();
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ followers: followers }));
-    // return parseFloat(followers);
-
+    res.json(JSON.stringify({ followers: followers }));
 });
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
