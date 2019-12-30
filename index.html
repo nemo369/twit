@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon.ico" />
     <style>
         @import url("https://fonts.googleapis.com/css?family=Lato");
 
@@ -103,19 +104,27 @@
 
         // Example POST method implementation:
         async function postData(url = '', ) {
-            await fetch(url, {
+            const response = await fetch(url, {
                 method: 'GET', // *GET, POST, PUT, DELETE, etc.
                 mode: 'no-cors' // no-cors, *cors, same-origin
-
             }).then(async (response) => {
                 return await response.json()
+
             })
         }
 
-        postData('https://twiiter-scraper.herokuapp.com/scrape')
-            .then(followers => {
-                console.log(followers);
-            })
+        // postData('https://twiiter-scraper.herokuapp.com/scrape')
+        //     .then(res => {
+        //         console.log(res);
+
+        // })
+
+
+        fetch('https://twiiter-scraper.herokuapp.com/scrape', { method: 'GET', mode: 'no-cors' })
+            .then((response) => response.json())
+            .then((myJson) => {
+                console.log(myJson);
+            });
 
 
 
