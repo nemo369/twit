@@ -1,14 +1,15 @@
+import { getTwitterCount } from './lib/scrapping.js'
 const express = require('express');
 const app = express();
+app.use(cors());
 const path = require('path');
-import { getTwitterCount } from './lib/scrapping.js'
 
 
 
 app.get('/scrape', async (req, res, next) => {
     console.log(`Scrape It`);
     const followers = await getTwitterCount();
-    res.send(JSON.stringify({ followers: followers }));
+    res.json({ followers: followers });
 });
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
