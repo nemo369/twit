@@ -128,10 +128,12 @@
                     console.log(res);
                 })
         }
+        (function () {
+            setTimeout(() => {
+                start()
+            }, 10);
 
-        setTimeout(() => {
-            start()
-        }, 10);
+        })();
 
 
 
