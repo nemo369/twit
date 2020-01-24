@@ -120,12 +120,18 @@
             })
         }
 
-        fetch('https://twiiter-scraper.herokuapp.com/scrape')
-            .then(res => res.json())
-            .then(res => {
-                startCount(res)
-                console.log(res);
-            })
+        function start() {
+            fetch('https://twiiter-scraper.herokuapp.com/scrape')
+                .then(res => res.json())
+                .then(res => {
+                    startCount(res)
+                    console.log(res);
+                })
+        }
+
+        setTimeout(() => {
+            start()
+        }, 10);
 
 
 
