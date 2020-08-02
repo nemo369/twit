@@ -110,7 +110,7 @@
         }
 
         // Example POST method implementation:
-        async function postData(url = '', ) {
+        async function postData(url = '',) {
             const response = await fetch(url, {
                 method: 'GET', // *GET, POST, PUT, DELETE, etc.
                 mode: 'no-cors' // no-cors, *cors, same-origin
@@ -128,12 +128,13 @@
                     console.log(res);
                 })
         }
-        (function () {
+
+        window.onload = function () {
             setTimeout(() => {
                 start()
             }, 10);
 
-        })();
+        };
 
 
 

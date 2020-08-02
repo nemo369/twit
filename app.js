@@ -10,10 +10,12 @@ const path = require('path');
 
 app.get('/scrape', async (req, res, next) => {
     const followers = await getTwitterCount();
+    console.log(followers);
     res.status(200).json((followers));
 
 });
 app.get('/', function (req, res) {
+
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
