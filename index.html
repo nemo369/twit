@@ -101,11 +101,11 @@
                 if (subCount >= toalFolowers) {
                     clearInterval(intervalId)
                 }
-            }, 2);
+            }, 1);
         }
 
         function requestCall() {
-            subCount++;
+            subCount = subCount + 10;
             odometer.innerHTML = subCount;
         }
 
